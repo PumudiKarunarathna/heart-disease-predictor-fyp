@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Slider from './components/Slider';
+import Footer from './components/Footer';
 
 function App() {
   
