@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Slider from './components/Slider';
 import Footer from './components/Footer';
+import AboutUs from './components/AboutUs';
 
 function App() {
   
