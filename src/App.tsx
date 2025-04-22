@@ -3,6 +3,7 @@ import { Toaster } from 'react-hot-toast';
 import Navbar from './components/Navbar';
 import Slider from './components/Slider';
 import { AuthForms } from './components/AuthForms';
+import PredictionForm from './components/PredictionForm';
 import Footer from './components/Footer';
 import AboutUs from './components/AboutUs';
 import ContactUs from './components/ContactUs';
