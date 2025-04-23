@@ -5,14 +5,50 @@ import Slider from './components/Slider';
 import { AuthForms } from './components/AuthForms';
 import PredictionForm from './components/PredictionForm';
 import Results from './components/Results';
-import Footer from './components/Footer';
 import AboutUs from './components/AboutUs';
 import ContactUs from './components/ContactUs';
 import MoreInformation from './components/MoreInformation';
-
+import Footer from './components/Footer';
+import image1 from './assets/8.jpeg';
 
 function App() {
-  
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [currentPage, setCurrentPage] = useState('home');
+  const [authMode, setAuthMode] = useState<'signin' | 'signup'>('signin');
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    setIsLoggedIn(!!token);
+    
+    const results = localStorage.getItem('predictionResult');
+    if (results && window.location.pathname === '/results') {
+      setCurrentPage('results');
+    }
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
+    localStorage.removeItem('predictionResult'); 
+    setIsLoggedIn(false);
+    setCurrentPage('home');
+  };
+
+  const handleAuthSuccess = () => {
+    const token = localStorage.getItem('token');
+    if (token) {
+      setIsLoggedIn(true);
+      setCurrentPage('form');
+    } else {
+      setCurrentPage('home');
+    }
+  };
+
+  const handleAuthNavigation = (mode: 'signin' | 'signup') => {
+    setAuthMode(mode);
+    setCurrentPage('auth');
+  };
+
   const renderMainContent = () => {
     if (currentPage === 'home') {
       return (
@@ -73,7 +109,25 @@ function App() {
         </>
       );
     }
+
+    switch (currentPage) {
+      case 'about':
+        return <AboutUs />;
+      case 'contact':
+        return <ContactUs />;
+      case 'auth':
+        return <AuthForms onSuccess={handleAuthSuccess} initialMode={authMode} />;
+      case 'form':
+        return isLoggedIn ? <PredictionForm /> : null;
+      case 'results':
+        return <Results setCurrentPage={setCurrentPage} />;
+      case 'more-info':
+        return <MoreInformation />;
+      default:
+        return null;
+    }
   };
+
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
       <Toaster />
