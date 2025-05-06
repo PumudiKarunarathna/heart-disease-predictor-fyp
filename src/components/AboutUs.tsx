@@ -6,7 +6,7 @@ const AboutUs = () => {
     <div className="py-12 bg-gray-50">
       <div className="px-4 mx-auto max-w-7xl">
         <div className="mb-12 text-center">
-          <h1 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">About HeartCare</h1>
+          <h1 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">About GastroCardia</h1>
           <p className="max-w-3xl mx-auto text-lg text-gray-600">
             We are dedicated to revolutionizing heart disease prediction through advanced technology and machine learning.
           </p>

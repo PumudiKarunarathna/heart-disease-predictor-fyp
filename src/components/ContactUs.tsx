@@ -62,21 +62,21 @@ const ContactUs = () => {
                 <MapPin className="flex-shrink-0 w-6 h-6 text-red-500" />
                 <div>
                   <h3 className="font-semibold">Address</h3>
-                  <p className="text-gray-600">xxxxxxxxxxxxxxxx</p>
+                  <p className="text-gray-600">Medical Center, Sri Lanka</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
                 <Phone className="flex-shrink-0 w-6 h-6 text-red-500" />
                 <div>
                   <h3 className="font-semibold">Phone</h3>
-                  <p className="text-gray-600">+1111111111111111</p>
+                  <p className="text-gray-600">0712345678</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
                 <Mail className="flex-shrink-0 w-6 h-6 text-red-500" />
                 <div>
                   <h3 className="font-semibold">Email</h3>
-                  <p className="text-gray-600">xxxxxxxxxxxxxxxxxxxxxxx</p>
+                  <p className="text-gray-600">gastrocardia@gmail.com</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">

@@ -27,7 +27,7 @@ const Navbar: React.FC<NavbarProps> = ({
         <div className="flex justify-between h-16">
           <div className="flex items-center cursor-pointer" onClick={() => handleNavigation('home')}>
             <Heart className="w-8 h-8 text-red-500" />
-            <span className="ml-2 text-xl font-semibold">HeartCare</span>
+            <span className="ml-2 text-xl font-semibold">GastroCardia</span>
           </div>
           
           {/* Mobile menu button */}
