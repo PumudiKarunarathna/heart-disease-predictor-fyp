@@ -276,7 +276,7 @@ const PredictionForm = () => {
 
           {/* Gastric Cancer Fields */}
           <div>
-            <h3 className="mb-3 text-lg font-semibold">Gastric Cancer Risk Factors</h3>
+            <h3 className="mb-3 text-lg font-semibold">Gastric Risk Factors</h3>
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
               <div>
                 <label className="block mb-2 text-gray-700">Alcohol Consumption</label>
@@ -382,7 +382,7 @@ const PredictionForm = () => {
               </div>
 
               <div>
-                <label className="block mb-2 text-gray-700">Family History of Gastric Cancer</label>
+                <label className="block mb-2 text-gray-700">Family History of Gastric</label>
                 <div className="flex gap-4 mt-2">
                   <label className="flex items-center space-x-2">
                     <input

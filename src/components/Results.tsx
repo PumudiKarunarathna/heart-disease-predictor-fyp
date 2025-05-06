@@ -125,7 +125,7 @@ const Results: React.FC<ResultsProps> = ({ setCurrentPage }) => {
 
   const getConditionDisplayName = (condition: string) => {
     if (condition === 'heart_disease') return 'Heart Disease';
-    if (condition === 'gastric_cancer') return 'Gastric Cancer';
+    if (condition === 'gastric_cancer') return 'Gastric';
     return condition;
   };
 
@@ -210,7 +210,7 @@ const Results: React.FC<ResultsProps> = ({ setCurrentPage }) => {
           </div>
           <div className="mt-4 text-sm text-gray-600">
             {differentialDiagnosis.confidence < 0.75 && 
-              <p className="italic">Note: Due to lower confidence level, the analysis focuses on gastric cancer risk factors.</p>
+              <p className="italic">Note: Due to lower confidence level, the analysis focuses on gastric risk factors.</p>
             }
           </div>
         </div>
