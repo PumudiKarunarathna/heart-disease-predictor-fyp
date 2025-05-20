@@ -31,7 +31,7 @@ class DualConditionPredictor:
         # List of key gastric cancer fields that user will provide
         self.key_gastric_fields = [
             'age', 'gender', 'alcohol_consumption', 'ct_scan', 
-            'dietary_habits', 'geographical_location', 'existing_conditions', 
+            'dietary_habits',  'existing_conditions', 
             'biopsy_results', 'family_history', 'smoking_habits'
         ]
         
@@ -48,6 +48,7 @@ class DualConditionPredictor:
             'targetscan': True,
             'diana_microt': True,
             'elmmo': 3,
+            'geographical_location' : 'Urban',
             
             # Target gene defaults
             'target_entrez': '5290',

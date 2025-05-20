@@ -19,7 +19,6 @@ const PredictionForm = () => {
     alcohol_consumption: string;
     ct_scan: string;
     dietary_habits: string;
-    geographical_location: string;
     existing_conditions: string[];
     biopsy_results: string;
     family_history: boolean;
@@ -42,7 +41,6 @@ const PredictionForm = () => {
     alcohol_consumption: '',
     ct_scan: '',
     dietary_habits: '',
-    geographical_location: '',
     existing_conditions: [],
     biopsy_results: '',
     family_history: false,
@@ -326,26 +324,6 @@ const PredictionForm = () => {
                   <option value="High-preserved">High-preserved foods</option>
                   <option value="Plant-based">Plant-based</option>
                   <option value="Mediterranean">Mediterranean</option>
-                </select>
-              </div>
-
-              <div>
-                <label className="block mb-2 text-gray-700">Geographical Location</label>
-                <select
-                  className="w-full p-2 border rounded focus:ring-2 focus:ring-red-500 focus:border-red-500"
-                  value={formData.geographical_location as string}
-                  onChange={(e) => handleInputChange('geographical_location', e.target.value)}
-                  required
-                >
-                  <option value="">Select Geographical Location</option>
-                  <option value="Urban">Urban</option>
-                  <option value="Rural">Rural</option>
-                  <option value="Coastal">Coastal</option>
-                  <option value="Mountains">Mountains</option>
-                  <option value="Eastern Asia">Eastern Asia</option>
-                  <option value="Western Europe">Western Europe</option>
-                  <option value="North America">North America</option>
-                  <option value="South America">South America</option>
                 </select>
               </div>
 

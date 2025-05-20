@@ -196,7 +196,7 @@ const Results: React.FC<ResultsProps> = ({ setCurrentPage }) => {
             <div className="space-y-2">
               <p className="text-gray-600">Most Likely Condition:</p>
               <p className="text-lg font-semibold">
-                {getConditionDisplayName(differentialDiagnosis.most_likely_condition)}
+                {differentialDiagnosis.confidence < 0.75 ?'Gastric' : getConditionDisplayName(differentialDiagnosis.most_likely_condition)}
               </p>
             </div>
             <div className="space-y-2">
@@ -208,11 +208,11 @@ const Results: React.FC<ResultsProps> = ({ setCurrentPage }) => {
               </p>
             </div>
           </div>
-          <div className="mt-4 text-sm text-gray-600">
+          {/* <div className="mt-4 text-sm text-gray-600">
             {differentialDiagnosis.confidence < 0.75 && 
               <p className="italic">Note: Due to lower confidence level, the analysis focuses on gastric risk factors.</p>
             }
-          </div>
+          </div> */}
         </div>
 
         {/* Primary Condition Ensemble Prediction */}
