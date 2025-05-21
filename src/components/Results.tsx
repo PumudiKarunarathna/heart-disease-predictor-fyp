@@ -227,7 +227,7 @@ const Results: React.FC<ResultsProps> = ({ setCurrentPage }) => {
               <p className={`text-lg font-semibold ${risk.color}`}>
                 {workingData.ensemble.prediction === 1 
                   ? `${getConditionDisplayName(primaryCondition)} Risk Detected` 
-                  : `No ${getConditionDisplayName(primaryCondition)} Risk Detected`}
+                  : ` ${getConditionDisplayName(primaryCondition)} Risk Detected`}
               </p>
             </div>
             <div className="space-y-2">
